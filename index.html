@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-     content="width=device-width, initial-scale=1, user-scalable=yes">
- 
-  <title>zacker150's Recipes</title>
-  <script>
-    function includeHTMLSnippet() {
-        // Traverse the collection of
-        // all HTML elements
-        id = document.getElementsByTagName("*");
-        for (i = 0; i < id.length; i++) {
-            element = id[i];
-
-            // Search for elements with
-            // specific attributes
-            file = element.getAttribute(
-                "GFG-include-html-snippet");
-            if (file) {
-                // Create an HTTP request with the 
-                // attribute value as the file name
-                xmlRequest = new XMLHttpRequest();
-                xmlRequest.onreadystatechange = function () {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) { 
-                            element.innerHTML = this.responseText; 
-                        }
-                          
-                        if (this.status == 404) { 
-                            element.innerHTML = "Page not found.";
-                        }
-                        // Delete the attribute and
-                        // call this function again
-                        element.removeAttribute(
-                            "GFG-include-html-snippet");
-
-                        includeHTMLSnippet();
-                    }
-                }
-                xmlRequest.open("GET", file, true);
-                xmlRequest.send();
-                return; // Exit function.
-            }
-        }
-    };
-</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <p>Hello World!</p>
-  <div GFG-include-html-snippet="recipe_links.html"></div>
-      
-  <script>
-      includeHTMLSnippet();
-  </script>
+
+  <header>
+    <h1>Hello <span>World!</span></h1>
+    <input
+      id="search"
+      type="search"
+      placeholder="Search recipes&#x2026;"
+      aria-label="Search recipes"
+      autocomplete="off"
+    />
+  </header>
+
+  <main>
+    <div id="card-grid" role="list" aria-label="Recipe list"></div>
+  </main>
+
+  <!-- PDF modal -->
+  <div id="modal" hidden role="dialog" aria-modal="true" aria-label="Recipe viewer">
+    <div id="modal-content">
+      <button id="close-btn" aria-label="Close viewer">&#x2715;</button>
+      <iframe id="pdf-frame" title="Recipe PDF"></iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
