@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Recipes</h1>
+    <input
+      id="search"
+      type="search"
+      placeholder="Search recipes&#x2026;"
+      aria-label="Search recipes"
+      autocomplete="off"
+    />
+  </header>
+
+  <main>
+    <div id="card-grid" role="list" aria-label="Recipe list"></div>
+  </main>
+
+  <!-- PDF modal -->
+  <div id="modal" hidden role="dialog" aria-modal="true" aria-label="Recipe viewer">
+    <div id="modal-content">
+      <button id="close-btn" aria-label="Close viewer">&#x2715;</button>
+      <iframe id="pdf-frame" title="Recipe PDF"></iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

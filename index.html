@@ -3,34 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Recipes</title>
+  <title>zacker150</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <header>
-    <h1>Hello <span>World!</span></h1>
-    <input
-      id="search"
-      type="search"
-      placeholder="Search recipes&#x2026;"
-      aria-label="Search recipes"
-      autocomplete="off"
-    />
-  </header>
-
-  <main>
-    <div id="card-grid" role="list" aria-label="Recipe list"></div>
-  </main>
-
-  <!-- PDF modal -->
-  <div id="modal" hidden role="dialog" aria-modal="true" aria-label="Recipe viewer">
-    <div id="modal-content">
-      <button id="close-btn" aria-label="Close viewer">&#x2715;</button>
-      <iframe id="pdf-frame" title="Recipe PDF"></iframe>
-    </div>
+<body class="home">
+  <div class="profile">
+    <h1>@zacker150</h1>
   </div>
 
-  <script src="app.js"></script>
+  <nav class="links" aria-label="Links">
+    <a class="link-btn" href="https://www.twitch.tv/zacker150">
+      <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+      Twitch
+    </a>
+    <a class="link-btn" href="https://x.com/zacker150">
+      <svg class="link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      X
+    </a>
+    <a class="link-btn" href="/recipes">Recipes</a>
+  </nav>
 </body>
 </html>
