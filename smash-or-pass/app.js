@@ -4,7 +4,6 @@ const deck = document.getElementById("deck");
 const counter = document.getElementById("counter");
 const progressBar = document.getElementById("progress-bar");
 const actions = document.getElementById("actions");
-const infoDialog = document.getElementById("info-dialog");
 let current = 0;
 let votes = [];
 let dragging = false;
@@ -106,16 +105,10 @@ actions.addEventListener("click", event => {
   if (button) choose(button.dataset.choice);
 });
 document.addEventListener("keydown", event => {
-  if (infoDialog.open) return;
   if (event.key === "ArrowLeft") choose("pass");
   if (event.key === "ArrowRight") choose("smash");
   if (event.key === "ArrowUp") choose("marry");
 });
-document.getElementById("info-button").addEventListener("click", () => infoDialog.showModal());
-document.getElementById("info-close").addEventListener("click", () => infoDialog.close());
-document.getElementById("info-got-it").addEventListener("click", () => infoDialog.close());
-infoDialog.addEventListener("click", event => { if (event.target === infoDialog) infoDialog.close(); });
-
 async function loadProfiles() {
   try {
     const response = await fetch("profiles.json");
