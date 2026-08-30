@@ -11,8 +11,8 @@ let dragging = false;
 let startX = 0;
 let startY = 0;
 
-function cardMarkup(profile, index) {
-  return `<article class="sop-card" data-index="${index}" style="z-index:${profiles.length - index}">
+function cardMarkup(profile, index, stackIndex) {
+  return `<article class="sop-card" data-index="${index}" style="z-index:${profiles.length - index}"${stackIndex ? " aria-hidden=\"true\"" : ""}>
     <img src="${profile.image}" alt="${profile.name} from Palworld" draggable="false">
     <div class="sop-photo-shade"></div>
     <div class="sop-stamp sop-stamp-pass">Pass</div>
@@ -28,7 +28,7 @@ function cardMarkup(profile, index) {
 }
 
 function renderDeck() {
-  deck.innerHTML = profiles.slice(current, current + 3).map((profile, i) => cardMarkup(profile, current + i)).join("");
+  deck.innerHTML = profiles.slice(current, current + 3).map((profile, i) => cardMarkup(profile, current + i, i)).join("");
   [...deck.children].forEach((card, i) => {
     card.style.setProperty("--stack", i);
     if (i === 0) bindDrag(card);

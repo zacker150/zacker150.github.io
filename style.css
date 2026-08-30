@@ -743,17 +743,17 @@ body.sop-page {
 .sop-deck { position: relative; height: min(66svh, 620px); min-height: 440px; }
 .sop-card { --stack: 0; position: absolute; inset: calc(var(--stack) * 7px) calc(var(--stack) * 6px) calc(var(--stack) * -7px); overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.65rem; background: #252530; box-shadow: 0 24px 70px rgba(0,0,0,.44); transform: scale(calc(1 - var(--stack) * .035)) translateY(calc(var(--stack) * 5px)); transform-origin: bottom center; touch-action: none; user-select: none; transition: transform .32s cubic-bezier(.2,.75,.25,1), opacity .3s; }
 .sop-card.is-dragging { transition: none; cursor: grabbing; }
-.sop-card img { width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.sop-photo-shade { position: absolute; inset: 30% 0 0; background: linear-gradient(transparent, rgba(8,8,12,.34) 29%, rgba(8,8,12,.97) 100%); }
-.sop-profile-copy { position: absolute; inset: auto 0 0; padding: 2.5rem 1.35rem 1.35rem; }
+.sop-card img { width: 100%; height: 58%; object-fit: cover; object-position: center 28%; pointer-events: none; background: #282332; }
+.sop-photo-shade { position: absolute; inset: 39% 0 41%; background: linear-gradient(transparent, #17171f); pointer-events: none; }
+.sop-profile-copy { position: absolute; inset: 56% 0 0; display: flex; flex-direction: column; padding: .85rem 1.35rem 1.2rem; background: linear-gradient(#17171f, #101016); }
 .sop-name-row { display: flex; align-items: center; gap: .6rem; }
-.sop-name-row h2 { font-size: 2rem; line-height: 1; letter-spacing: -.035em; text-shadow: 0 2px 15px rgba(0,0,0,.5); }
+.sop-name-row h2 { font-size: 1.75rem; line-height: 1; letter-spacing: -.035em; }
 .sop-name-row h2 span { font-weight: 400; }
 .sop-online { width: .62rem; height: .62rem; border: 2px solid white; border-radius: 50%; background: #32d583; box-shadow: 0 1px 7px #32d583; }
-.sop-location { margin-top: .5rem; color: #e4e4ea; font-size: .78rem; }
+.sop-location { margin-top: .48rem; color: #b8b8c3; font-size: .72rem; line-height: 1.35; }
 .sop-location i { margin-right: .2rem; color: #ff6784; }
-.sop-bio { margin-top: .8rem; color: #eeeef2; font-size: .92rem; line-height: 1.42; }
-.sop-tags { display: flex; flex-wrap: wrap; gap: .42rem; margin-top: .8rem; list-style: none; }
+.sop-bio { margin-top: .65rem; color: #eeeef2; font-size: .84rem; line-height: 1.4; }
+.sop-tags { display: flex; flex-wrap: wrap; gap: .38rem; margin-top: auto; padding-top: .65rem; list-style: none; }
 .sop-tags li { padding: .34rem .65rem; border: 1px solid rgba(255,255,255,.25); border-radius: 999px; background: rgba(10,10,15,.32); font-size: .7rem; font-weight: 700; backdrop-filter: blur(8px); }
 .sop-stamp { position: absolute; z-index: 3; top: 2.2rem; padding: .4rem .65rem; border: 4px solid; border-radius: .45rem; opacity: 0; font-size: 1.85rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; transform: rotate(-10deg); }
 .sop-stamp-pass { left: 1.5rem; color: #ff5e70; }
@@ -788,9 +788,13 @@ body.sop-page {
 @media (max-width: 420px) {
   .sop-app { padding-left: .75rem; padding-right: .75rem; }
   .sop-deck { height: min(65svh, 570px); min-height: 410px; }
-  .sop-profile-copy { padding: 2rem 1rem 1rem; }
-  .sop-name-row h2 { font-size: 1.7rem; }
-  .sop-bio { font-size: .84rem; }
+  .sop-card img { height: 55%; }
+  .sop-photo-shade { inset: 36% 0 44%; }
+  .sop-profile-copy { inset: 53% 0 0; padding: .8rem 1rem 1rem; }
+  .sop-name-row h2 { font-size: 1.55rem; }
+  .sop-bio { font-size: .78rem; line-height: 1.36; }
+  .sop-tags { padding-top: .5rem; }
+  .sop-tags li { font-size: .64rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
