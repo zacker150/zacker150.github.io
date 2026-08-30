@@ -81,14 +81,13 @@ function renderResults() {
   const counts = choice => votes.filter(vote => vote.choice === choice).length;
   deck.innerHTML = `<section class="sop-results">
     <span class="sop-results-icon"><i class="fa-solid fa-fire"></i></span>
-    <p class="sop-eyebrow">That’s the deck</p><h2>Your verdicts are in.</h2>
+    <p class="sop-eyebrow">No more matches.</p><h2>Your verdicts are in.</h2>
     <div class="sop-result-grid">
       <div><strong>${counts("pass")}</strong><span>Pass</span></div>
       <div><strong>${counts("marry")}</strong><span>Marry</span></div>
       <div><strong>${counts("smash")}</strong><span>Smash</span></div>
     </div>
     <button id="restart" class="sop-dialog-primary" type="button"><i class="fa-solid fa-rotate-right"></i> Play again</button>
-    <p class="sop-private"><i class="fa-solid fa-lock"></i> Your choices never leave this page.</p>
   </section>`;
   document.getElementById("restart").addEventListener("click", restart);
 }

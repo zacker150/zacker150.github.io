@@ -1,73 +1,73 @@
 [
   {
     "name": "Zoe Rayne",
-    "type": "Human NPC",
-    "location": "Tower of the Rayne Syndicate, Windswept Island",
+    "type": "Human",
+    "location": "Rayne Syndicate Tower",
     "image": "https://palworld.wiki.gg/images/Zoe_and_Grizzbolt_splash.png?7521ad",
-    "description": "Zoe Rayne is the leader of the Rayne Syndicate. Her partner Pal is Grizzbolt, and she can be recruited as an ally after being defeated for the first time.",
-    "tags": ["Faction leader", "Rayne Syndicate", "Grizzbolt"],
+    "description": "I wanna see the world (with you).",
+    "tags": ["Faction leader", "Rayne Syndicate"],
     "source": "https://palworld.wiki.gg/wiki/Zoe_and_Grizzbolt"
   },
   {
     "name": "Lovander",
-    "type": "Pal · No. 069 · Dark",
-    "location": "Twilight Dunes and Desiccated Dunes at night",
+    "type": "Dark Pal",
+    "location": "Twilight Dunes",
     "image": "https://img.youtube.com/vi/Kk97_L7n9KM/maxresdefault.jpg",
-    "description": "Lovander roams at night in pursuit of affection. Once interested only in other Pals, it has recently begun chasing humans too.",
+    "description": "I don't discriminate when it comes to love.",
     "tags": ["Pal on the Prowl", "Nocturnal", "Heart Drain"],
     "source": "https://palworld.wiki.gg/wiki/Lovander"
   },
   {
     "name": "Lily Everhart",
-    "type": "Human NPC",
-    "location": "Free Pal Alliance Tower, Crescent Moon Shore",
+    "type": "Human",
+    "location": "Free Pal Alliance Tower",
     "image": "https://palworld.wiki.gg/images/Lily_and_Lyleen_splash.png?80a6e7",
-    "description": "Lily Everhart is the leader of the Free Pal Alliance and fights alongside her partner Pal, Lyleen.",
-    "tags": ["Faction leader", "Free Pal Alliance", "Lyleen"],
+    "description": "#FreeThePals",
+    "tags": ["Faction leader", "Free Pal Alliance"],
     "source": "https://palworld.wiki.gg/wiki/Lily_and_Lyleen"
   },
   {
     "name": "Katress",
-    "type": "Pal · No. 079 · Dark",
-    "location": "Crescent Moon Shore, Verdant Brook and Scars of War at night",
+    "type": "Dark Pal",
+    "location": "Crescent Moon Shore",
     "image": "https://img.youtube.com/vi/HPtFYqPwKlM/maxresdefault.jpg",
-    "description": "Katress uses shadow power to create arcane phenomena, prefers raw food, and has a fierce rivalry with Wixen.",
+    "description": "I like my steak still mooing.",
     "tags": ["Phantasmal Feline", "Nocturnal", "Grimoire Collector"],
     "source": "https://palworld.wiki.gg/wiki/Katress"
   },
   {
     "name": "Saya Kurosaki",
-    "type": "Human NPC",
-    "location": "Moonflower Tower, Sakurajima Island",
-    "image": "https://palworld.wiki.gg/images/Saya_and_Selyne_splash.png?13bbe3",
-    "description": "Saya Kurosaki is the leader of the Moonflower Clan. Her partner Pal is Selyne, and her Tower is located on Sakurajima Island.",
-    "tags": ["Faction leader", "Moonflower Clan", "Selyne"],
+    "type": "Human",
+    "location": "Sakurajima Island",
+    "image": "https://palworld.wiki.gg/images/Saya_and_Selyne_person.png?b6bb06&format=original",
+    "description": "Let's watch the moonrise toghether.",
+    "tags": ["Faction leader", "Moonflower Clan"],
     "source": "https://palworld.wiki.gg/wiki/Saya_and_Selyne"
   },
   {
     "name": "Wixen",
-    "type": "Pal · No. 078 · Fire",
+    "type": "Fire Pal",
     "location": "Mount Obsidian",
     "image": "https://img.youtube.com/vi/jTNMxuAGRqs/maxresdefault.jpg",
-    "description": "Wixen uses light to create arcane phenomena, likes its food well-done, and is especially hostile toward Katress.",
+    "description": "I like my men like I like my steak: well-done with Ketchup.",
     "tags": ["Vulpine Mage", "Fire", "Lord Fox"],
     "source": "https://palworld.wiki.gg/wiki/Wixen"
   },
   {
     "name": "Anubis",
-    "type": "Pal · No. 139 · Ground",
+    "type": "Ground Pal",
     "location": "Twilight Dunes, around (-134, -94)",
     "image": "https://img.youtube.com/vi/cJYrDhcuYbY/maxresdefault.jpg",
-    "description": "Anubis was once revered as a noble symbol by those who rejected wealth and power, but eventually became associated with death.",
+    "description": "People used to worship me as a god, but now I just want to be your friend.",
     "tags": ["Guardian of the Dark Sun", "Ground", "Guardian of the Desert"],
     "source": "https://palworld.wiki.gg/wiki/Anubis"
   },
   {
     "name": "Lunaris",
-    "type": "Pal · No. 082 · Neutral",
+    "type": "Neutral Pal",
     "location": "Sea Breeze Archipelago, around (-147, -659)",
     "image": "https://img.youtube.com/vi/JfYfimugcyE/maxresdefault.jpg",
-    "description": "Lunaris can control anyone careless enough to meet its gaze; companions seen beside it may already be under its influence.",
+    "description": "I'm going to hypnotize you.",
     "tags": ["Extraterrestrial", "Neutral", "Antigravity"],
     "source": "https://palworld.wiki.gg/wiki/Lunaris"
   }
