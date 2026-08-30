@@ -789,7 +789,8 @@ body.sop-page {
   .sop-profile-copy { inset: auto 0 0; padding: 4rem 1.4rem 4.3rem; background: transparent; }
   .sop-name-row h2 { font-size: 2rem; text-shadow: 0 2px 16px rgba(0,0,0,.45); }
   .sop-location { color: #f0f0f3; font-size: .78rem; }
-  .sop-bio, .sop-tags { display: none; }
+  .sop-bio { margin-top: .6rem; color: #e6e6eb; font-size: .8rem; line-height: 1.42; text-shadow: 0 1px 10px rgba(0,0,0,.72); }
+  .sop-tags { display: none; }
   .sop-actions { position: relative; z-index: 20; margin-top: -2.25rem; padding-top: 0; }
   .sop-action i { background: #202129; box-shadow: 0 9px 25px rgba(0,0,0,.5); }
   .sop-action:hover i, .sop-action:focus-visible i { background: #2a2b34; }
