@@ -69,6 +69,7 @@ function bindDrag(card) {
 function choose(choice) {
   if (current >= profiles.length || dragging) return;
   const card = deck.firstElementChild;
+  if ([...card.classList].some(className => className.startsWith("exit-"))) return;
   votes.push({ name: profiles[current].name, choice });
   card.dataset.preview = choice;
   card.classList.add(`exit-${choice}`);
