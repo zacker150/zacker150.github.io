@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0b10" />
+  <title>Smash or Pass</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body class="sop-page">
+  <main class="sop-app">
+    <header class="sop-header">
+      <div class="sop-brand">
+        <span class="sop-logo" aria-hidden="true"><i class="fa-solid fa-fire-flame-curved"></i></span>
+        <div>
+          <h1>Smash or Pass</h1>
+          <p>Choose wisely. Or don’t.</p>
+        </div>
+      </div>
+      <button id="info-button" class="sop-icon-button" type="button" aria-label="How to play">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <section class="sop-stage" aria-label="Profile deck">
+      <div class="sop-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+      <p id="counter" class="sop-counter" aria-live="polite"></p>
+      <div id="deck" class="sop-deck"></div>
+
+      <div id="actions" class="sop-actions" aria-label="Choose an action">
+        <button class="sop-action sop-pass" type="button" data-choice="pass" aria-label="Pass">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i><span>Pass</span>
+        </button>
+        <button class="sop-action sop-marry" type="button" data-choice="marry" aria-label="Marry">
+          <i class="fa-solid fa-ring" aria-hidden="true"></i><span>Marry</span>
+        </button>
+        <button class="sop-action sop-smash" type="button" data-choice="smash" aria-label="Smash">
+          <i class="fa-solid fa-heart" aria-hidden="true"></i><span>Smash</span>
+        </button>
+      </div>
+
+      <p class="sop-hints"><span>← Pass</span><span>↑ Marry</span><span>Smash →</span></p>
+    </section>
+  </main>
+
+  <dialog id="info-dialog" class="sop-dialog">
+    <button id="info-close" class="sop-dialog-close" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <span class="sop-dialog-icon"><i class="fa-solid fa-hand-pointer"></i></span>
+    <h2>Three ways to choose</h2>
+    <p>Drag a card left to pass, right to smash, or up to marry. You can also use the buttons or your arrow keys.</p>
+    <button id="info-got-it" class="sop-dialog-primary" type="button">Got it</button>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
