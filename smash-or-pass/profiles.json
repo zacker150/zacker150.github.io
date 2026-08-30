@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Zoe Rayne",
+    "type": "Human",
+    "location": "Rayne Syndicate Tower",
+    "image": "https://palworld.wiki.gg/images/Zoe_and_Grizzbolt_splash.png?7521ad",
+    "description": "I wanna see the world (with you).",
+    "tags": ["Faction leader", "Rayne Syndicate"],
+    "source": "https://palworld.wiki.gg/wiki/Zoe_and_Grizzbolt"
+  },
+  {
+    "name": "Lovander",
+    "type": "Dark Pal",
+    "location": "Twilight Dunes",
+    "image": "https://img.youtube.com/vi/Kk97_L7n9KM/maxresdefault.jpg",
+    "description": "I don't discriminate when it comes to love.",
+    "tags": ["Pal on the Prowl", "Nocturnal", "Heart Drain"],
+    "source": "https://palworld.wiki.gg/wiki/Lovander"
+  },
+  {
+    "name": "Lily Everhart",
+    "type": "Human",
+    "location": "Free Pal Alliance Tower",
+    "image": "https://palworld.wiki.gg/images/Lily_and_Lyleen_splash.png?80a6e7",
+    "description": "#FreeThePals",
+    "tags": ["Faction leader", "Free Pal Alliance"],
+    "source": "https://palworld.wiki.gg/wiki/Lily_and_Lyleen"
+  },
+  {
+    "name": "Katress",
+    "type": "Dark Pal",
+    "location": "Crescent Moon Shore",
+    "image": "https://img.youtube.com/vi/HPtFYqPwKlM/maxresdefault.jpg",
+    "description": "I like my steak still mooing.",
+    "tags": ["Phantasmal Feline", "Nocturnal", "Grimoire Collector"],
+    "source": "https://palworld.wiki.gg/wiki/Katress"
+  },
+  {
+    "name": "Saya Kurosaki",
+    "type": "Human",
+    "location": "Sakurajima Island",
+    "image": "https://palworld.wiki.gg/images/Saya_and_Selyne_person.png?b6bb06&format=original",
+    "description": "Let's watch the moonrise toghether.",
+    "tags": ["Faction leader", "Moonflower Clan"],
+    "source": "https://palworld.wiki.gg/wiki/Saya_and_Selyne"
+  },
+  {
+    "name": "Wixen",
+    "type": "Fire Pal",
+    "location": "Mount Obsidian",
+    "image": "https://img.youtube.com/vi/jTNMxuAGRqs/maxresdefault.jpg",
+    "description": "I like my men like I like my steak: well-done with Ketchup.",
+    "tags": ["Vulpine Mage", "Fire", "Lord Fox"],
+    "source": "https://palworld.wiki.gg/wiki/Wixen"
+  },
+  {
+    "name": "Anubis",
+    "type": "Ground Pal",
+    "location": "Twilight Dunes",
+    "image": "https://img.youtube.com/vi/cJYrDhcuYbY/maxresdefault.jpg",
+    "description": "People used to worship me as a god, but now I just want to be your friend.",
+    "tags": ["Guardian of the Dark Sun", "Ground", "Guardian of the Desert"],
+    "source": "https://palworld.wiki.gg/wiki/Anubis"
+  },
+  {
+    "name": "Lunaris",
+    "type": "Neutral Pal",
+    "location": "Sea Breeze Archipelago, around (-147, -659)",
+    "image": "https://img.youtube.com/vi/JfYfimugcyE/maxresdefault.jpg",
+    "description": "I'm going to hypnotize you.",
+    "tags": ["Extraterrestrial", "Neutral", "Antigravity"],
+    "source": "https://palworld.wiki.gg/wiki/Lunaris"
+  },
+  {
+    "name": "Sekhmet",
+    "type": "Ground Pal",
+    "location": "Twilight Dunes",
+    "image": "https://progametalk.com/wp-content/uploads/2026/07/P10140SEKHMET-1.png",
+    "description": "Let's dance the night away.",
+    "tags": ["Handiwork", "Desert Empress"],
+    "source": "https://palworld.wiki.gg/wiki/Sekhmet"
+  }
+]
