@@ -2,7 +2,6 @@ let profiles = [];
 
 const deck = document.getElementById("deck");
 const counter = document.getElementById("counter");
-const progressBar = document.getElementById("progress-bar");
 const actions = document.getElementById("actions");
 let current = 0;
 let votes = [];
@@ -33,7 +32,6 @@ function renderDeck() {
     if (i === 0) bindDrag(card);
   });
   counter.textContent = `${Math.min(current + 1, profiles.length)} of ${profiles.length}`;
-  progressBar.style.width = `${(current / profiles.length) * 100}%`;
 }
 
 function bindDrag(card) {
@@ -73,7 +71,6 @@ function choose(choice) {
   card.dataset.preview = choice;
   card.classList.add(`exit-${choice}`);
   current += 1;
-  progressBar.style.width = `${(current / profiles.length) * 100}%`;
   setTimeout(current < profiles.length ? renderDeck : renderResults, 360);
 }
 

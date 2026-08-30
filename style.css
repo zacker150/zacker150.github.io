@@ -736,8 +736,6 @@ body.sop-page {
 .sop-brand h1 { color: var(--sop-copy); font-size: 1.1rem; letter-spacing: -.02em; }
 .sop-brand p { margin-top: .12rem; color: var(--sop-muted); font-size: .73rem; }
 .sop-stage { position: relative; }
-.sop-progress { height: 3px; margin: 0 .15rem .45rem; overflow: hidden; border-radius: 3px; background: #262631; }
-.sop-progress span { display: block; width: 0; height: 100%; background: linear-gradient(90deg, #ff5a72, #f43f8a); transition: width .3s; }
 .sop-counter { margin-bottom: .45rem; color: var(--sop-muted); font-size: .7rem; font-weight: 700; text-align: right; text-transform: uppercase; letter-spacing: .11em; }
 .sop-deck { position: relative; height: min(66svh, 620px); min-height: 440px; }
 .sop-card { --stack: 0; position: absolute; inset: calc(var(--stack) * 7px) calc(var(--stack) * 6px) calc(var(--stack) * -7px); overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.65rem; background: #252530; box-shadow: 0 24px 70px rgba(0,0,0,.44); transform: scale(calc(1 - var(--stack) * .035)) translateY(calc(var(--stack) * 5px)); transform-origin: bottom center; touch-action: none; user-select: none; transition: transform .32s cubic-bezier(.2,.75,.25,1), opacity .3s; }
@@ -783,8 +781,6 @@ body.sop-page {
 @media (min-width: 700px) {
   .sop-app { max-width: 430px; padding-top: 1.25rem; }
   .sop-header { margin-bottom: .7rem; }
-  .sop-progress { position: absolute; z-index: 30; top: .7rem; left: .8rem; right: .8rem; height: 4px; margin: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,.42) 0 calc(12.5% - 3px), transparent calc(12.5% - 3px) 12.5%); }
-  .sop-progress span { background: repeating-linear-gradient(90deg, #fff 0 calc(12.5% - 3px), transparent calc(12.5% - 3px) 12.5%); }
   .sop-counter { display: none; }
   .sop-deck { height: min(69svh, 620px); min-height: 540px; }
   .sop-card { border-radius: 1.25rem; }
@@ -813,5 +809,5 @@ body.sop-page {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sop-card, .sop-progress span, .sop-action i { transition-duration: .01ms; }
+  .sop-card, .sop-action i { transition-duration: .01ms; }
 }
