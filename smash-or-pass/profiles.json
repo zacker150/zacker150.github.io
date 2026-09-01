@@ -79,5 +79,50 @@
     "description": "Let's dance the night away.",
     "tags": ["Handiwork", "Desert Empress"],
     "source": "https://palworld.wiki.gg/wiki/Sekhmet"
+  },
+  {
+    "name": "Fuack",
+    "type": "Water Pal",
+    "location": "Marsh Island",
+    "image": "https://palworld.wiki.gg/images/Fuack.png",
+    "description": "It's in the name",
+    "tags": ["Rowdy Wave Ripper", "Water", "Surfing Slam"],
+    "source": "https://palworld.wiki.gg/wiki/Fuack"
+  },
+  {
+    "name": "Vixy",
+    "type": "Neutral Pal",
+    "location": "Windswept Hills",
+    "image": "https://palworld.wiki.gg/images/Vixy.png",
+    "description": "Your favorite fox vtuber",
+    "tags": ["Small-fry Pal", "Neutral", "Dig Here!"],
+    "source": "https://palworld.wiki.gg/wiki/Vixy"
+  },
+  {
+    "name": "Depresso",
+    "type": "Dark Pal",
+    "location": "Windswept Hills (at night)",
+    "image": "https://palworld.wiki.gg/images/Depresso.png",
+    "description": "Will you be my espresso",
+    "tags": ["Several Sleepless Nights Later", "Dark", "Caffeine Inoculation"],
+    "source": "https://palworld.wiki.gg/wiki/Depresso"
+  },
+  {
+    "name": "Pengullet",
+    "type": "Water / Ice Pal",
+    "location": "Sea Breeze Archipelago",
+    "image": "https://palworld.wiki.gg/images/Pengullet.png",
+    "description": "Reaching for the stars",
+    "tags": ["Ate Too Much", "Water / Ice", "Pengullet Launcher"],
+    "source": "https://palworld.wiki.gg/wiki/Pengullet"
+  },
+  {
+    "name": "Penking",
+    "type": "Water / Ice Pal",
+    "location": "No. 1 Wildlife Sanctuary",
+    "image": "https://palworld.wiki.gg/images/Penking.png",
+    "description": "Chad wishes he was me",
+    "tags": ["Pioneer of the Frozen Sea", "Water / Ice", "Brave Sailor"],
+    "source": "https://palworld.wiki.gg/wiki/Penking"
   }
 ]
