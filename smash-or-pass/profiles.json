@@ -6,6 +6,7 @@
     "image": "https://palworld.wiki.gg/images/Zoe_and_Grizzbolt_splash.png?7521ad",
     "description": "I wanna see the world (with you).",
     "tags": ["Faction leader", "Rayne Syndicate"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Zoe_and_Grizzbolt"
   },
   {
@@ -15,6 +16,7 @@
     "image": "https://img.youtube.com/vi/Kk97_L7n9KM/maxresdefault.jpg",
     "description": "I don't discriminate when it comes to love.",
     "tags": ["Pal on the Prowl", "Nocturnal", "Heart Drain"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 3}, {"name": "Medicine Production", "level": 3}, {"name": "Mining", "level": 2}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Lovander"
   },
   {
@@ -24,6 +26,7 @@
     "image": "https://palworld.wiki.gg/images/Lily_and_Lyleen_splash.png?80a6e7",
     "description": "#FreeThePals",
     "tags": ["Faction leader", "Free Pal Alliance"],
+    "workSuitabilities": [{"name": "Planting", "level": 3}, {"name": "Handiwork", "level": 2}, {"name": "Gathering", "level": 2}, {"name": "Medicine Production", "level": 3}],
     "source": "https://palworld.wiki.gg/wiki/Lily_and_Lyleen"
   },
   {
@@ -33,6 +36,7 @@
     "image": "https://img.youtube.com/vi/HPtFYqPwKlM/maxresdefault.jpg",
     "description": "I like my steak still mooing.",
     "tags": ["Phantasmal Feline", "Nocturnal", "Grimoire Collector"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 3}, {"name": "Medicine Production", "level": 3}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Katress"
   },
   {
@@ -42,6 +46,7 @@
     "image": "https://palworld.wiki.gg/images/Saya_and_Selyne_person.png?b6bb06&format=original",
     "description": "Let's watch the moonrise toghether.",
     "tags": ["Faction leader", "Moonflower Clan"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 1}, {"name": "Transporting", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Saya_and_Selyne"
   },
   {
@@ -51,6 +56,7 @@
     "image": "https://img.youtube.com/vi/jTNMxuAGRqs/maxresdefault.jpg",
     "description": "I like my men like I like my steak: well-done with Ketchup.",
     "tags": ["Vulpine Mage", "Fire", "Lord Fox"],
+    "workSuitabilities": [{"name": "Kindling", "level": 3}, {"name": "Handiwork", "level": 3}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Wixen"
   },
   {
@@ -60,6 +66,7 @@
     "image": "https://img.youtube.com/vi/cJYrDhcuYbY/maxresdefault.jpg",
     "description": "People used to worship me as a god, but now I just want to be your friend.",
     "tags": ["Guardian of the Dark Sun", "Ground", "Guardian of the Desert"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 6}, {"name": "Mining", "level": 6}, {"name": "Transporting", "level": 4}],
     "source": "https://palworld.wiki.gg/wiki/Anubis"
   },
   {
@@ -69,6 +76,7 @@
     "image": "https://img.youtube.com/vi/JfYfimugcyE/maxresdefault.jpg",
     "description": "I'm going to hypnotize you.",
     "tags": ["Extraterrestrial", "Neutral", "Antigravity"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 4}, {"name": "Gathering", "level": 2}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Lunaris"
   },
   {
@@ -78,6 +86,7 @@
     "image": "https://progametalk.com/wp-content/uploads/2026/07/P10140SEKHMET-1.png",
     "description": "Let's dance the night away.",
     "tags": ["Handiwork", "Desert Empress"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 6}, {"name": "Mining", "level": 3}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Sekhmet"
   },
   {
@@ -87,6 +96,7 @@
     "image": "https://palworld.wiki.gg/images/Fuack.png",
     "description": "It's in the name",
     "tags": ["Rowdy Wave Ripper", "Water", "Surfing Slam"],
+    "workSuitabilities": [{"name": "Watering", "level": 1}, {"name": "Handiwork", "level": 1}, {"name": "Transporting", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Fuack"
   },
   {
@@ -96,6 +106,7 @@
     "image": "https://palworld.wiki.gg/images/Vixy.png",
     "description": "Your favorite fox vtuber",
     "tags": ["Small-fry Pal", "Neutral", "Dig Here!"],
+    "workSuitabilities": [{"name": "Gathering", "level": 1}, {"name": "Farming", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Vixy"
   },
   {
@@ -105,6 +116,7 @@
     "image": "https://palworld.wiki.gg/images/Depresso.png",
     "description": "Will you be my espresso",
     "tags": ["Several Sleepless Nights Later", "Dark", "Caffeine Inoculation"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 1}, {"name": "Mining", "level": 1}, {"name": "Transporting", "level": 1}, {"name": "Farming", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Depresso"
   },
   {
@@ -114,6 +126,7 @@
     "image": "https://palworld.wiki.gg/images/Pengullet.png",
     "description": "Reaching for the stars",
     "tags": ["Ate Too Much", "Water / Ice", "Pengullet Launcher"],
+    "workSuitabilities": [{"name": "Watering", "level": 1}, {"name": "Handiwork", "level": 1}, {"name": "Cooling", "level": 1}, {"name": "Transporting", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Pengullet"
   },
   {
@@ -123,6 +136,7 @@
     "image": "https://palworld.wiki.gg/images/Penking.png",
     "description": "Chad wishes he was me",
     "tags": ["Pioneer of the Frozen Sea", "Water / Ice", "Brave Sailor"],
+    "workSuitabilities": [{"name": "Watering", "level": 2}, {"name": "Handiwork", "level": 2}, {"name": "Mining", "level": 3}, {"name": "Cooling", "level": 2}, {"name": "Transporting", "level": 3}],
     "source": "https://palworld.wiki.gg/wiki/Penking"
   }
 ]
