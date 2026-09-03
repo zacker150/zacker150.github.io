@@ -734,7 +734,7 @@ body.sop-page {
 }
 
 .sop-app { --sop-card-ratio: 43 / 62; width: min(calc(100vw - 2rem), calc((100svh - 9rem) * 43 / 62)); min-width: min(100%, 20rem); max-width: none; margin: 0 auto; padding: max(.75rem, env(safe-area-inset-top)) 0 max(.75rem, env(safe-area-inset-bottom)); }
-.sop-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: .85rem; padding: 0 .2rem; }
+.sop-header { display: flex; align-items: center; justify-content: center; margin-bottom: .85rem; padding: 0 .2rem; }
 .sop-brand { display: flex; align-items: center; gap: .7rem; }
 .sop-logo { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .9rem; color: white; font-size: 1.25rem; background: linear-gradient(145deg, #ff5a72, #f43f8a); box-shadow: 0 8px 24px rgba(244,63,138,.25); }
 .sop-brand h1 { margin: 0; color: var(--sop-copy); font-size: 2.6rem; line-height: 1; letter-spacing: -.04em; }
