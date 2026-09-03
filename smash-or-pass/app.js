@@ -75,20 +75,25 @@ function renderDeck() {
   counter.textContent = `${Math.min(current + 1, profiles.length)} of ${profiles.length}`;
 }
 
-function setDetailsExpanded(card, expanded) {
+function setDetailsExpanded(card, expanded, moveFocus = true) {
   const toggle = card.querySelector(".sop-details-toggle");
   const panel = card.querySelector(".sop-details-panel");
   card.classList.toggle("is-expanded", expanded);
   toggle.setAttribute("aria-expanded", String(expanded));
   panel.setAttribute("aria-hidden", String(!expanded));
   panel.inert = !expanded;
-  if (expanded) panel.querySelector(".sop-details-close").focus();
-  else toggle.focus();
+  if (moveFocus) {
+    if (expanded) panel.querySelector(".sop-details-close").focus();
+    else toggle.focus();
+  }
 }
 
 function bindCard(card) {
   const toggle = card.querySelector(".sop-details-toggle");
   const panel = card.querySelector(".sop-details-panel");
+  let wheelDelta = 0;
+  let wheelLockUntil = 0;
+  let wheelResetTimer;
   toggle.addEventListener("pointerdown", event => event.stopPropagation());
   toggle.addEventListener("click", event => {
     event.stopPropagation();
@@ -96,6 +101,29 @@ function bindCard(card) {
   });
   panel.addEventListener("pointerdown", event => event.stopPropagation());
   panel.querySelector(".sop-details-close").addEventListener("click", () => setDetailsExpanded(card, false));
+  card.addEventListener("wheel", event => {
+    if (performance.now() < wheelLockUntil) {
+      event.preventDefault();
+      return;
+    }
+    const expanded = card.classList.contains("is-expanded");
+    const shouldOpen = !expanded && event.deltaY > 0;
+    const shouldClose = expanded && panel.scrollTop <= 1 && event.deltaY < 0;
+    if (!shouldOpen && !shouldClose) return;
+
+    const multiplier = event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16
+      : event.deltaMode === WheelEvent.DOM_DELTA_PAGE ? card.clientHeight
+      : 1;
+    wheelDelta += event.deltaY * multiplier;
+    clearTimeout(wheelResetTimer);
+    wheelResetTimer = setTimeout(() => { wheelDelta = 0; }, 180);
+    if (Math.abs(wheelDelta) < 24) return;
+
+    event.preventDefault();
+    setDetailsExpanded(card, shouldOpen, false);
+    wheelLockUntil = performance.now() + 320;
+    wheelDelta = 0;
+  }, { passive: false });
 
   card.addEventListener("pointerdown", event => {
     if (card.classList.contains("is-expanded") || event.target.closest("button, a")) return;
