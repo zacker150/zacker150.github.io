@@ -788,6 +788,7 @@ body.sop-page {
 .sop-action:hover i, .sop-action:focus-visible i { transform: translateY(-3px) scale(1.04); background: #22222d; }
 .sop-pass { color: #ff6577; }.sop-marry { color: #62a8ff; }.sop-smash { color: #45dda2; }
 .sop-marry i { width: 3.75rem; height: 3.75rem; margin-top: -.2rem; }
+.sop-marry .sop-action-icon::before { content: ""; width: 68%; height: 68%; background: url("https://static.wikia.nocookie.net/palworld/images/c/c5/Legendary_Sphere.png") center / contain no-repeat; filter: drop-shadow(0 2px 5px rgba(0,0,0,.45)); }
 .sop-hints { display: flex; justify-content: center; gap: 1.25rem; margin-top: .55rem; color: #696976; font-size: .64rem; }
 .sop-results-icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; margin: 0 auto 1rem; border-radius: 1rem; color: #ff6685; background: rgba(255,86,122,.12); font-size: 1.35rem; }
 .sop-dialog-primary { width: 100%; min-height: 3rem; border: 0; border-radius: .85rem; color: white; background: linear-gradient(120deg, #ff5a72, #f43f8a); font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 9px 24px rgba(244,63,138,.2); }
