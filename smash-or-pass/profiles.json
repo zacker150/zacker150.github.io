@@ -64,7 +64,7 @@
     "type": "Ground Pal",
     "location": "Twilight Dunes",
     "image": "https://img.youtube.com/vi/cJYrDhcuYbY/maxresdefault.jpg",
-    "description": "People used to worship me as a god, but now I just want to be your friend.",
+    "description": "People used to worship me. Now, I just want to be your friend.",
     "tags": ["Guardian of the Dark Sun", "Ground", "Guardian of the Desert"],
     "workSuitabilities": [{"name": "Handiwork", "level": 6}, {"name": "Mining", "level": 6}, {"name": "Transporting", "level": 4}],
     "source": "https://palworld.wiki.gg/wiki/Anubis"
@@ -72,7 +72,7 @@
   {
     "name": "Lunaris",
     "type": "Neutral Pal",
-    "location": "Sea Breeze Archipelago, around (-147, -659)",
+    "location": "Sea Breeze Archipelago",
     "image": "https://img.youtube.com/vi/JfYfimugcyE/maxresdefault.jpg",
     "description": "I'm going to hypnotize you.",
     "tags": ["Extraterrestrial", "Neutral", "Antigravity"],
