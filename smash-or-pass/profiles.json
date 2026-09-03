@@ -23,7 +23,7 @@
     "name": "Lily Everhart",
     "type": "Human",
     "location": "Free Pal Alliance Tower",
-    "image": "https://palworld.wiki.gg/images/Lily_and_Lyleen_splash.png?80a6e7",
+    "image": "https://static.wikia.nocookie.net/palworld/images/9/96/Lily_Everhart.png",
     "description": "#FreeThePals",
     "tags": ["Faction leader", "Free Pal Alliance"],
     "workSuitabilities": [{"name": "Planting", "level": 3}, {"name": "Handiwork", "level": 2}, {"name": "Gathering", "level": 2}, {"name": "Medicine Production", "level": 3}],
