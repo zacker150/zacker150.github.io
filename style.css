@@ -762,7 +762,7 @@ body.sop-page {
 .sop-details-panel h2 { margin: 0; font-size: 2.125rem; line-height: 1.1; letter-spacing: -.035em; }
 .sop-details-location { margin-top: .9rem; color: #b8b8c3; font-size: 1.0625rem; line-height: 1.35; }
 .sop-details-location i { margin-right: .2rem; color: #ff6784; }
-.sop-details-bio { margin-top: 1.15rem; color: #ededf1; font-size: 1.0625rem; line-height: 1.45; }
+.sop-details-bio { margin-top: 1.15rem; padding: .85rem 1rem; border: 1px solid #30303b; border-radius: .8rem; color: #ededf1; background: rgba(27,27,36,.82); font-size: 1.0625rem; line-height: 1.45; }
 .sop-work-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem; margin-top: 1.4rem; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.16); list-style: none; }
 .sop-work-grid li { display: grid; grid-template-columns: 2rem auto; align-items: center; justify-content: center; gap: .3rem; min-width: 0; min-height: 3rem; padding: .45rem .35rem; border: 1px solid #30303b; border-radius: .8rem; background: #1b1b24; }
 .sop-work-icon { display: grid; place-items: center; width: 2rem; height: 2rem; color: #ff6b86; font-size: .9rem; }
