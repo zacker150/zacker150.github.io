@@ -9,7 +9,36 @@ let dragging = false;
 let startX = 0;
 let startY = 0;
 
+const workIcons = {
+  "Kindling": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_00.webp",
+  "Watering": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_01.webp",
+  "Planting": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_02.webp",
+  "Generating Electricity": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_03.webp",
+  "Handiwork": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_04.webp",
+  "Gathering": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_05.webp",
+  "Lumbering": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_06.webp",
+  "Mining": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_07.webp",
+  "Medicine Production": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_08.webp",
+  "Cooling": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_10.webp",
+  "Transporting": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_11.webp",
+  "Farming": "https://cdn.paldb.cc/image/Pal/Texture/UI/InGame/T_icon_palwork_12.webp"
+};
+
+function workSuitabilityMarkup(profile) {
+  const suitabilities = profile.workSuitabilities || [];
+  if (!suitabilities.length) {
+    return `<p class="sop-work-empty">Work suitability data is unavailable.</p>`;
+  }
+  return `<ul class="sop-work-grid">${suitabilities.map(item => `<li aria-label="${item.name}, level ${item.level}">
+    <span class="sop-work-icon">${workIcons[item.name]
+      ? `<img src="${workIcons[item.name]}" alt="" loading="lazy">`
+      : `<i class="fa-solid fa-briefcase" aria-hidden="true"></i>`}</span>
+    <strong>${item.level}</strong>
+  </li>`).join("")}</ul>`;
+}
+
 function cardMarkup(profile, index, stackIndex) {
+  const detailsId = `profile-details-${index}`;
   return `<article class="sop-card" data-index="${index}" style="z-index:${profiles.length - index}"${stackIndex ? " aria-hidden=\"true\"" : ""}>
     <img src="${profile.image}" alt="${profile.name} from Palworld" draggable="false">
     <div class="sop-photo-shade"></div>
@@ -21,7 +50,19 @@ function cardMarkup(profile, index, stackIndex) {
       <p class="sop-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${profile.location} · ${profile.type}</p>
       <p class="sop-bio">${profile.description}</p>
       <ul class="sop-tags">${profile.tags.map(tag => `<li>${tag}</li>`).join("")}</ul>
+      <button class="sop-details-toggle" type="button" aria-label="View ${profile.name} details" aria-expanded="false" aria-controls="${detailsId}"${stackIndex ? " tabindex=\"-1\"" : ""}>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+      </button>
     </div>
+    <section id="${detailsId}" class="sop-details-panel" aria-hidden="true" inert>
+      <div class="sop-details-heading">
+        <h2>${profile.name}</h2>
+        <button class="sop-details-close" type="button" aria-label="Close ${profile.name} details"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button>
+      </div>
+      <p class="sop-details-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> ${profile.location} · ${profile.type}</p>
+      <p class="sop-details-bio">${profile.description}</p>
+      ${workSuitabilityMarkup(profile)}
+    </section>
   </article>`;
 }
 
@@ -29,13 +70,63 @@ function renderDeck() {
   deck.innerHTML = profiles.slice(current, current + 3).map((profile, i) => cardMarkup(profile, current + i, i)).join("");
   [...deck.children].forEach((card, i) => {
     card.style.setProperty("--stack", i);
-    if (i === 0) bindDrag(card);
+    if (i === 0) bindCard(card);
   });
   counter.textContent = `${Math.min(current + 1, profiles.length)} of ${profiles.length}`;
 }
 
-function bindDrag(card) {
+function setDetailsExpanded(card, expanded, moveFocus = true) {
+  const toggle = card.querySelector(".sop-details-toggle");
+  const panel = card.querySelector(".sop-details-panel");
+  card.classList.toggle("is-expanded", expanded);
+  toggle.setAttribute("aria-expanded", String(expanded));
+  panel.setAttribute("aria-hidden", String(!expanded));
+  panel.inert = !expanded;
+  if (moveFocus) {
+    if (expanded) panel.querySelector(".sop-details-close").focus();
+    else toggle.focus();
+  }
+}
+
+function bindCard(card) {
+  const toggle = card.querySelector(".sop-details-toggle");
+  const panel = card.querySelector(".sop-details-panel");
+  let wheelDelta = 0;
+  let wheelLockUntil = 0;
+  let wheelResetTimer;
+  toggle.addEventListener("pointerdown", event => event.stopPropagation());
+  toggle.addEventListener("click", event => {
+    event.stopPropagation();
+    setDetailsExpanded(card, true);
+  });
+  panel.addEventListener("pointerdown", event => event.stopPropagation());
+  panel.querySelector(".sop-details-close").addEventListener("click", () => setDetailsExpanded(card, false));
+  card.addEventListener("wheel", event => {
+    if (performance.now() < wheelLockUntil) {
+      event.preventDefault();
+      return;
+    }
+    const expanded = card.classList.contains("is-expanded");
+    const shouldOpen = !expanded && event.deltaY > 0;
+    const shouldClose = expanded && panel.scrollTop <= 1 && event.deltaY < 0;
+    if (!shouldOpen && !shouldClose) return;
+
+    const multiplier = event.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16
+      : event.deltaMode === WheelEvent.DOM_DELTA_PAGE ? card.clientHeight
+      : 1;
+    wheelDelta += event.deltaY * multiplier;
+    clearTimeout(wheelResetTimer);
+    wheelResetTimer = setTimeout(() => { wheelDelta = 0; }, 180);
+    if (Math.abs(wheelDelta) < 24) return;
+
+    event.preventDefault();
+    setDetailsExpanded(card, shouldOpen, false);
+    wheelLockUntil = performance.now() + 320;
+    wheelDelta = 0;
+  }, { passive: false });
+
   card.addEventListener("pointerdown", event => {
+    if (card.classList.contains("is-expanded") || event.target.closest("button, a")) return;
     dragging = true;
     startX = event.clientX;
     startY = event.clientY;
@@ -101,6 +192,14 @@ actions.addEventListener("click", event => {
   if (button) choose(button.dataset.choice);
 });
 document.addEventListener("keydown", event => {
+  const card = deck.firstElementChild;
+  if (card?.classList.contains("is-expanded")) {
+    if (event.key === "Escape" || event.key === "ArrowDown") {
+      event.preventDefault();
+      setDetailsExpanded(card, false);
+    }
+    return;
+  }
   if (event.key === "ArrowLeft") choose("pass");
   if (event.key === "ArrowRight") choose("smash");
   if (event.key === "ArrowUp") choose("marry");
