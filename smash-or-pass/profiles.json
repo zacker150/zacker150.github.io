@@ -3,7 +3,7 @@
     "name": "Zoe Rayne",
     "type": "Human",
     "location": "Rayne Syndicate Tower",
-    "image": "https://palworld.wiki.gg/images/Zoe_and_Grizzbolt_splash.png?7521ad",
+    "image": "https://palworld.wiki.gg/images/Zoe_and_Grizzbolt_person.png",
     "description": "I wanna see the world (with you).",
     "tags": ["Faction leader", "Rayne Syndicate"],
     "workSuitabilities": [{"name": "Handiwork", "level": 2}],
