@@ -718,6 +718,8 @@ body.date-me {
 }
 
 /* -- Smash or Pass ---------------------------------------- */
+html:has(body.sop-page) { font-size: clamp(16px, 2.2svh, 52px); }
+
 body.sop-page {
   --sop-bg: #0b0b10;
   --sop-panel: #15151d;
@@ -726,18 +728,20 @@ body.sop-page {
   min-height: 100svh;
   color: var(--sop-copy);
   background: radial-gradient(circle at 50% -15%, #39223f 0, #16121e 31%, var(--sop-bg) 68%);
-  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
-.sop-app { width: min(100%, 510px); min-height: 100svh; margin: 0 auto; padding: max(1.1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom)); }
-.sop-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: .85rem; padding: 0 .2rem; }
+.sop-app { --sop-card-ratio: 43 / 62; width: min(calc(100vw - 2rem), calc((100svh - 9rem) * 43 / 62)); min-width: min(100%, 20rem); max-width: none; margin: 0 auto; padding: max(.75rem, env(safe-area-inset-top)) 0 max(.75rem, env(safe-area-inset-bottom)); }
+.sop-header { display: flex; align-items: center; justify-content: center; margin-bottom: .85rem; padding: 0 .2rem; }
 .sop-brand { display: flex; align-items: center; gap: .7rem; }
 .sop-logo { display: grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: .9rem; color: white; font-size: 1.25rem; background: linear-gradient(145deg, #ff5a72, #f43f8a); box-shadow: 0 8px 24px rgba(244,63,138,.25); }
-.sop-brand h1 { color: var(--sop-copy); font-size: 1.1rem; letter-spacing: -.02em; }
+.sop-brand h1 { margin: 0; color: var(--sop-copy); font-size: 2.6rem; line-height: 1; letter-spacing: -.04em; }
 .sop-brand p { margin-top: .12rem; color: var(--sop-muted); font-size: .73rem; }
 .sop-stage { position: relative; }
 .sop-counter { margin-bottom: .45rem; color: var(--sop-muted); font-size: .7rem; font-weight: 700; text-align: right; text-transform: uppercase; letter-spacing: .11em; }
-.sop-deck { position: relative; height: min(66svh, 620px); min-height: 440px; }
+.sop-deck { position: relative; width: 100%; aspect-ratio: var(--sop-card-ratio); }
 .sop-card { --stack: 0; position: absolute; inset: calc(var(--stack) * 7px) calc(var(--stack) * 6px) calc(var(--stack) * -7px); overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 1.65rem; background: #252530; box-shadow: 0 24px 70px rgba(0,0,0,.44); transform: scale(calc(1 - var(--stack) * .035)) translateY(calc(var(--stack) * 5px)); transform-origin: bottom center; touch-action: none; user-select: none; transition: transform .32s cubic-bezier(.2,.75,.25,1), opacity .3s; }
 .sop-card.is-dragging { transition: none; cursor: grabbing; }
 .sop-card > img { width: 100%; height: 58%; object-fit: cover; object-position: center 28%; pointer-events: none; background: #282332; }
@@ -784,6 +788,7 @@ body.sop-page {
 .sop-action:hover i, .sop-action:focus-visible i { transform: translateY(-3px) scale(1.04); background: #22222d; }
 .sop-pass { color: #ff6577; }.sop-marry { color: #62a8ff; }.sop-smash { color: #45dda2; }
 .sop-marry i { width: 3.75rem; height: 3.75rem; margin-top: -.2rem; }
+.sop-marry .sop-action-icon::before { content: ""; width: 68%; height: 68%; background: url("https://static.wikia.nocookie.net/palworld/images/c/c5/Legendary_Sphere.png") center / contain no-repeat; filter: drop-shadow(0 2px 5px rgba(0,0,0,.45)); }
 .sop-hints { display: flex; justify-content: center; gap: 1.25rem; margin-top: .55rem; color: #696976; font-size: .64rem; }
 .sop-results-icon { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; margin: 0 auto 1rem; border-radius: 1rem; color: #ff6685; background: rgba(255,86,122,.12); font-size: 1.35rem; }
 .sop-dialog-primary { width: 100%; min-height: 3rem; border: 0; border-radius: .85rem; color: white; background: linear-gradient(120deg, #ff5a72, #f43f8a); font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 9px 24px rgba(244,63,138,.2); }
@@ -796,10 +801,9 @@ body.sop-page {
 .sop-private { margin-top: 1rem; color: #737380; font-size: .68rem; }.sop-private i { margin-right: .25rem; }
 
 @media (min-width: 700px) {
-  .sop-app { max-width: 430px; padding-top: 1.25rem; }
+  .sop-app { padding-top: max(.75rem, env(safe-area-inset-top)); }
   .sop-header { margin-bottom: .7rem; }
   .sop-counter { display: none; }
-  .sop-deck { height: min(69svh, 620px); min-height: 540px; }
   .sop-card { border-radius: 1.25rem; }
   .sop-card > img { height: 100%; object-position: center; }
   .sop-photo-shade { inset: 42% 0 0; background: linear-gradient(transparent, rgba(8,8,12,.18) 24%, rgba(8,8,12,.92) 74%, #09090d 100%); }
@@ -817,8 +821,7 @@ body.sop-page {
 }
 
 @media (max-width: 420px) {
-  .sop-app { padding-left: .75rem; padding-right: .75rem; }
-  .sop-deck { height: min(65svh, 570px); min-height: 410px; }
+  .sop-app { width: min(calc(100vw - 1.5rem), calc((100svh - 7rem) * 43 / 62)); }
   .sop-card > img { height: 55%; }
   .sop-photo-shade { inset: 36% 0 44%; }
   .sop-profile-copy { inset: 53% 0 0; padding: .8rem 1rem 1rem; }
