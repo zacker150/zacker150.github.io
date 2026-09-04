@@ -39,7 +39,7 @@ function workSuitabilityMarkup(profile) {
 
 function cardMarkup(profile, index, stackIndex) {
   const detailsId = `profile-details-${index}`;
-  return `<article class="sop-card" data-index="${index}" style="z-index:${profiles.length - index}"${stackIndex ? " aria-hidden=\"true\"" : ""}>
+  return `<article class="sop-card" data-index="${index}" style="z-index:${3 - stackIndex}"${stackIndex ? " aria-hidden=\"true\"" : ""}>
     <img src="${profile.image}" alt="${profile.name} from Palworld" draggable="false">
     <div class="sop-photo-shade"></div>
     <div class="sop-stamp sop-stamp-pass">Pass</div>
