@@ -138,5 +138,15 @@
     "tags": ["Pioneer of the Frozen Sea", "Water / Ice", "Brave Sailor"],
     "workSuitabilities": [{"name": "Watering", "level": 2}, {"name": "Handiwork", "level": 2}, {"name": "Mining", "level": 3}, {"name": "Cooling", "level": 2}, {"name": "Transporting", "level": 3}],
     "source": "https://palworld.wiki.gg/wiki/Penking"
+  },
+  {
+    "name": "Cattiva",
+    "type": "Neutral Pal",
+    "location": "Plateau of Beginnings",
+    "image": "https://palworld.wiki.gg/images/Cattiva.png",
+    "description": "I'll carry you'.",
+    "tags": ["Catgirl", "Meow"],
+    "workSuitabilities": [{"name": "Handiwork", "level": 1}, {"name": "Transporting", "level": 1}, {"name": "Gathering", "level": 1}, {"name": "Mining", "level": 1}],
+    "source": "https://palworld.wiki.gg/wiki/Cattiva"
   }
 ]
