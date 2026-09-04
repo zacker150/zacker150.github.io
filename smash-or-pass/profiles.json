@@ -644,7 +644,7 @@
     "type": "Grass Pal",
     "location": "No. 3 Wildlife Sanctuary",
     "image": "images/lyleen.jpg",
-    "description": "I like to adopt VCVNTS.",
+    "description": "I like to adopt lost vtubers.",
     "tags": ["Large"],
     "workSuitabilities": [{"name": "Planting", "level": 7}, {"name": "Handiwork", "level": 5}, {"name": "Gathering", "level": 6}, {"name": "Medicine Production", "level": 5}],
     "source": "https://palworld.wiki.gg/wiki/Lyleen"
