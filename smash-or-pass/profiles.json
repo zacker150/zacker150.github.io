@@ -144,7 +144,7 @@
     "type": "Neutral Pal",
     "location": "Plateau of Beginnings",
     "image": "images/cattiva.webp",
-    "description": "I'll carry you'.",
+    "description": "I'll carry you.",
     "tags": ["Catgirl", "Meow", "Petite"],
     "workSuitabilities": [{"name": "Handiwork", "level": 1}, {"name": "Transporting", "level": 1}, {"name": "Gathering", "level": 1}, {"name": "Mining", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Cattiva"
@@ -224,7 +224,7 @@
     "type": "Grass Pal",
     "location": "Windswept Hills",
     "image": "images/tanzee.jpg",
-    "description": "I brought the banana.",
+    "description": "This Pal is known to the State of California to cause cancer.",
     "tags": ["Petite"],
     "workSuitabilities": [{"name": "Planting", "level": 1}, {"name": "Handiwork", "level": 1}, {"name": "Gathering", "level": 1}, {"name": "Lumbering", "level": 1}, {"name": "Transporting", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Tanzee"
