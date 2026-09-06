@@ -168,7 +168,6 @@ function choose(choice) {
 const FONT_STACK = `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`;
 const CARD_W = 300;
 const CARD_H = Math.round(CARD_W * 62 / 43);
-const CARD_RADIUS = CARD_W * .038;
 // Card CSS is written in rem against a ~524px-wide card, so shadows scale down with ours.
 const SHADOW_SCALE = CARD_W / 524;
 const GROUPS = [
@@ -176,16 +175,6 @@ const GROUPS = [
   { choice: "smash", label: "Smash", color: "#45dda2" },
   { choice: "pass", label: "Pass", color: "#ff6577" }
 ];
-
-function roundRectPath(ctx, x, y, width, height, radius) {
-  ctx.beginPath();
-  ctx.moveTo(x + radius, y);
-  ctx.arcTo(x + width, y, x + width, y + height, radius);
-  ctx.arcTo(x + width, y + height, x, y + height, radius);
-  ctx.arcTo(x, y + height, x, y, radius);
-  ctx.arcTo(x, y, x + width, y, radius);
-  ctx.closePath();
-}
 
 function ellipsize(ctx, text, maxWidth) {
   if (ctx.measureText(text).width <= maxWidth) return text;
@@ -263,7 +252,8 @@ function drawCard(ctx, profile, image, x, y) {
   const locGap = CARD_W * .018;
 
   ctx.save();
-  roundRectPath(ctx, x, y, CARD_W, CARD_H, CARD_RADIUS);
+  ctx.beginPath();
+  ctx.rect(x, y, CARD_W, CARD_H);
   ctx.clip();
   ctx.fillStyle = "#252530";
   ctx.fillRect(x, y, CARD_W, CARD_H);
@@ -314,22 +304,19 @@ function drawCard(ctx, profile, image, x, y) {
   clearShadow(ctx);
   ctx.restore();
 
-  roundRectPath(ctx, x + .5, y + .5, CARD_W - 1, CARD_H - 1, CARD_RADIUS);
   ctx.lineWidth = 1;
   ctx.strokeStyle = "rgba(255,255,255,.12)";
-  ctx.stroke();
+  ctx.strokeRect(x + .5, y + .5, CARD_W - 1, CARD_H - 1);
 }
 
 function drawGroupHeader(ctx, group, x, y, width, height) {
-  roundRectPath(ctx, x, y, width, height, height * .28);
   ctx.fillStyle = "rgba(255,255,255,.05)";
-  ctx.fill();
+  ctx.fillRect(x, y, width, height);
   ctx.strokeStyle = "rgba(255,255,255,.1)";
   ctx.lineWidth = 1;
-  ctx.stroke();
-  roundRectPath(ctx, x + height * .3, y + height * .24, height * .14, height * .52, height * .07);
+  ctx.strokeRect(x + .5, y + .5, width - 1, height - 1);
   ctx.fillStyle = group.color;
-  ctx.fill();
+  ctx.fillRect(x + height * .3, y + height * .24, height * .14, height * .52);
 
   ctx.textBaseline = "middle";
   ctx.font = `900 ${height * .42}px ${FONT_STACK}`;
@@ -356,18 +343,15 @@ async function buildSummaryCanvas() {
   ));
 
   const pad = 48;
-  const gap = 20;
   const headerH = 66;
-  const headerGap = 20;
-  const groupGap = 36;
   const titleH = 96;
   const footerH = 46;
   const widest = Math.max(...groups.map(group => group.items.length));
   const cols = Math.max(1, Math.min(8, widest, Math.round(Math.sqrt(votes.length * 1.6)) || 1));
-  const contentW = cols * CARD_W + (cols - 1) * gap;
+  const contentW = cols * CARD_W;
   const rowsOf = group => Math.ceil(group.items.length / cols);
-  const height = pad + titleH + groups.reduce((total, group, i) =>
-    total + (i ? groupGap : 0) + headerH + headerGap + rowsOf(group) * CARD_H + (rowsOf(group) - 1) * gap, 0) + footerH + pad;
+  const height = pad + titleH + groups.reduce((total, group) =>
+    total + headerH + rowsOf(group) * CARD_H, 0) + footerH + pad;
 
   const canvas = document.createElement("canvas");
   canvas.width = contentW + pad * 2;
@@ -395,14 +379,13 @@ async function buildSummaryCanvas() {
   ctx.fillText("Palder", pad, pad);
 
   let y = pad + titleH;
-  for (const [i, group] of groups.entries()) {
-    if (i) y += groupGap;
+  for (const group of groups) {
     drawGroupHeader(ctx, group, pad, y, contentW, headerH);
-    y += headerH + headerGap;
+    y += headerH;
     group.items.forEach((profile, index) => {
       const col = index % cols;
-      if (col === 0 && index) y += CARD_H + gap;
-      drawCard(ctx, profile, images.get(profile.image), pad + col * (CARD_W + gap), y);
+      if (col === 0 && index) y += CARD_H;
+      drawCard(ctx, profile, images.get(profile.image), pad + col * CARD_W, y);
     });
     y += CARD_H;
   }
