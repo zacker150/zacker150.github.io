@@ -114,7 +114,7 @@
     "type": "Dark Pal",
     "location": "Windswept Hills (at night)",
     "image": "images/depresso.webp",
-    "description": "Will you be my espresso",
+    "description": "Depression won't stop me from taking care of my people.",
     "tags": ["Petite"],
     "workSuitabilities": [{"name": "Handiwork", "level": 1}, {"name": "Mining", "level": 1}, {"name": "Transporting", "level": 1}, {"name": "Farming", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Depresso"
@@ -504,7 +504,7 @@
     "type": "Ice Pal",
     "location": "Frostbitten Isle",
     "image": "images/frostplume.webp",
-    "description": "Percision that makes the Germans jealous.",
+    "description": "Precision that makes the Germans jealous.",
     "tags": ["Medium"],
     "workSuitabilities": [{"name": "Gathering", "level": 2}, {"name": "Cooling", "level": 4}],
     "source": "https://palworld.wiki.gg/wiki/Frostplume"
@@ -564,7 +564,7 @@
     "type": "Grass/Dark Pal",
     "location": "Scorched Hill",
     "image": "images/prunelia.webp",
-    "description": "I'll pray for a good harvest and a better night.",
+    "description": "I know people.",
     "tags": ["Nocturnal", "Small"],
     "workSuitabilities": [{"name": "Planting", "level": 3}, {"name": "Handiwork", "level": 1}, {"name": "Gathering", "level": 2}, {"name": "Medicine Production", "level": 3}, {"name": "Transporting", "level": 1}],
     "source": "https://palworld.wiki.gg/wiki/Prunelia"
@@ -574,7 +574,7 @@
     "type": "Dark Pal",
     "location": "Frozen Coral Hill",
     "image": "images/splatterina.webp",
-    "description": "Love hurts. Let me show you.",
+    "description": "Swipe right if you like Dexter.",
     "tags": ["Nocturnal", "Medium"],
     "workSuitabilities": [{"name": "Handiwork", "level": 6}, {"name": "Lumbering", "level": 3}, {"name": "Medicine Production", "level": 5}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Splatterina"
@@ -584,7 +584,7 @@
     "type": "Neutral Pal",
     "location": "Sunreach Skies",
     "image": "images/valentail.webp",
-    "description": "I heard  you like baoflation?",
+    "description": "I heard  you like Baoflation?",
     "tags": ["Small"],
     "workSuitabilities": [{"name": "Gathering", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Valentail"
@@ -594,7 +594,7 @@
     "type": "Grass Pal",
     "location": "Sunreach Skies",
     "image": "images/souffline.webp",
-    "description": "Light as air and twice as sweet.",
+    "description": "I'll make you forget why you're on this app.",
     "tags": ["Small"],
     "workSuitabilities": [{"name": "Planting", "level": 2}, {"name": "Transporting", "level": 2}],
     "source": "https://palworld.wiki.gg/wiki/Souffline"
@@ -624,7 +624,7 @@
     "type": "Grass Pal",
     "location": "World Tree",
     "image": "images/mycora.webp",
-    "description": "Cute as a button. Spores included.",
+    "description": "I'm harmless. Really.",
     "tags": ["Medium"],
     "workSuitabilities": [{"name": "Planting", "level": 6}, {"name": "Handiwork", "level": 4}, {"name": "Gathering", "level": 4}, {"name": "Medicine Production", "level": 6}],
     "source": "https://palworld.wiki.gg/wiki/Mycora"
@@ -674,7 +674,7 @@
     "type": "Dark Pal",
     "location": "Summoning Altar",
     "image": "images/bellanoir.jpg",
-    "description": "You'll need a whole raid party to handle me.",
+    "description": "Swipe right for an invite to the Offkai orgy.",
     "tags": ["Nocturnal", "Medium"],
     "workSuitabilities": [{"name": "Handiwork", "level": 5}, {"name": "Medicine Production", "level": 5}, {"name": "Transporting", "level": 4}],
     "source": "https://palworld.wiki.gg/wiki/Bellanoir"
@@ -684,7 +684,7 @@
     "type": "Dark Pal",
     "location": "Summoning Altar",
     "image": "images/bellanoir-libero.webp",
-    "description": "I broke free. Now I'm your problem.",
+    "description": "The Offkai Orgy can't handle me.",
     "tags": ["Nocturnal", "Medium"],
     "workSuitabilities": [{"name": "Handiwork", "level": 6}, {"name": "Medicine Production", "level": 7}, {"name": "Transporting", "level": 4}],
     "source": "https://palworld.wiki.gg/wiki/Bellanoir_Libero"
